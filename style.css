@@ -1795,3 +1795,44 @@ body, p, li { color: rgba(245,241,232,.88) !important; }
   .nav__center { display: none; }
   .lang-btn { padding: .45rem .8rem; font-size: .55rem; }
 }
+
+/* ══ FIX: gateways-section — padding zero (no gap tra hero e cards) ══ */
+.gateways-section {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* ══ FIX: costellazione — stelle semplici, nessun glow ══ */
+.loader__const circle {
+  fill: var(--gold) !important;
+  filter: none !important;
+  opacity: 0;
+  animation: starSimple 2s ease-in-out infinite !important;
+}
+.loader__const circle:nth-child(1){animation-delay:0s!important;animation-duration:2.2s!important}
+.loader__const circle:nth-child(2){animation-delay:.4s!important;animation-duration:2.5s!important}
+.loader__const circle:nth-child(3){animation-delay:.8s!important;animation-duration:1.9s!important}
+.loader__const circle:nth-child(4){animation-delay:.2s!important;animation-duration:2.8s!important}
+.loader__const circle:nth-child(5){animation-delay:.6s!important;animation-duration:2.1s!important}
+.loader__const circle:nth-child(6){animation-delay:1s!important;animation-duration:2.4s!important}
+.loader__const circle:nth-child(7){animation-delay:.3s!important;animation-duration:2.6s!important}
+.loader__const circle:nth-child(8){animation-delay:.7s!important;animation-duration:2s!important}
+.loader__const circle:nth-child(9){animation-delay:.5s!important;animation-duration:2.3s!important}
+
+@keyframes starSimple {
+  0%,100% { opacity: .3; }
+  50%      { opacity: 1;  }
+}
+
+/* Linee della costellazione — oro sottile */
+.loader__const line {
+  stroke: var(--gold) !important;
+  opacity: .5 !important;
+  stroke-dasharray: none !important;
+  stroke-dashoffset: 0 !important;
+  animation: none !important;
+}
+/* Color oro per il contenitore SVG */
+.loader__const {
+  color: var(--gold) !important;
+}
